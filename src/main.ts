@@ -1,4 +1,4 @@
-import { Engine } from "excalibur";
+import { Engine, Vector } from "excalibur";
 import { Player } from "./player";
 import { loader } from "./resources";
 
@@ -7,7 +7,7 @@ class Game extends Engine {
     super({ width: 800, height: 600 });
   }
   initialize() {
-    const player = new Player();
+    const player = new Player({ pos: new Vector(150, 150) });
     this.add(player);
 
     this.start(loader);
