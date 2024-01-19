@@ -7,6 +7,7 @@ import {
   Vector,
 } from "excalibur";
 import { Resources } from "./resources";
+import {outlineMaterial} from "./material"
 
 export class SmallBolt extends Actor {
   private spriteScale = new Vector(1.5, 1.5);
@@ -25,6 +26,8 @@ export class SmallBolt extends Actor {
       width: 64,
       height: 128,
     });
+
+    this.graphics.material = outlineMaterial
 
     if (direction === "left") {
       this.flipHorizontal = true;
