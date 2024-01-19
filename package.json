@@ -4,7 +4,7 @@
   "description": "Excalibur TypeScript warriors game with Vite",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "npm run build && ex-test -d ./dist -t ./test/test.js"
